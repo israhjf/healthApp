@@ -10,22 +10,13 @@ import android.view.ViewGroup;
 
 import israel.healthapp.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * create an instance of this fragment.
- */
-public class viewPagerFragment extends Fragment {
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        
-    }
+public class FirstScreenFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_view_pager, container, false);
+        return inflater.inflate(R.layout.fragment_first_screen, container, false);
     }
 }
