@@ -19,15 +19,18 @@ public class AuthenticationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_authentication);
+        getSupportActionBar().hide();
+
         Log.d(TAG, "onCreate: Starting");
         sectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
-        viewPager = findViewById(R.id.view_pager);
+        viewPager = findViewById(R.id.authentication_view_pager);
         setupViewPager(viewPager);
     }
 
     private void setupViewPager(ViewPager viewPager){
         SectionsPagerAdapter adapter = new SectionsPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new WelcomeFragment(), "Welcome");
+        adapter.addFragment(new FitnessLevelFragment(), "FitnessLevel");
         viewPager.setAdapter(adapter);
     }
 }
