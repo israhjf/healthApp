@@ -1,7 +1,6 @@
 package israel.healthapp.views.home;
 
 import android.content.Context;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;

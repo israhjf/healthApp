@@ -14,7 +14,8 @@ import israel.healthapp.R;
 import israel.healthapp.views.home.HomeActivity;
 
 public class UserInfoFragment extends Fragment {
-    Button button;
+    private Button button;
+    private String fitnessLevel;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -28,6 +29,8 @@ public class UserInfoFragment extends Fragment {
                 openHomeActivity();
             }
         });
+
+        fitnessLevel = getArguments().getString("fitnessLevelKey");
         return view;
     }
 
