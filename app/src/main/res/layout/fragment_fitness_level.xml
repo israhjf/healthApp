@@ -41,7 +41,7 @@ tools:context=".views.onboarding.FitnessLevelFragment">
             android:padding="15dp"
             android:orientation="vertical"
             app:layout_constraintTop_toBottomOf="@id/level_textview"
-            app:layout_constraintBottom_toTopOf="@id/button_next"
+            app:layout_constraintBottom_toTopOf="@id/button_next_fitness_level"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent">
 
@@ -63,7 +63,7 @@ tools:context=".views.onboarding.FitnessLevelFragment">
         </RadioGroup>
 
         <Button
-            android:id="@+id/button_next"
+            android:id="@+id/button_next_fitness_level"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -78,7 +78,7 @@ tools:context=".views.onboarding.FitnessLevelFragment">
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_weight="0"
-            app:layout_constraintTop_toBottomOf="@id/button_next"
+            app:layout_constraintTop_toBottomOf="@id/button_next_fitness_level"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"/>

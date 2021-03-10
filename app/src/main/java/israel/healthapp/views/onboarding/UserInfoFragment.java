@@ -1,9 +1,9 @@
 package israel.healthapp.views.onboarding;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,28 +11,28 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import israel.healthapp.R;
+import israel.healthapp.views.home.HomeActivity;
 
-public class WelcomeFragment extends Fragment {
+public class UserInfoFragment extends Fragment {
     Button button;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_welcome, container, false);
-        button = (Button)view.findViewById(R.id.button_next);
+        View view = inflater.inflate(R.layout.fragment_user_info, container, false);
+        button = (Button)view.findViewById(R.id.user_start_button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openNextFragment();
+                openHomeActivity();
             }
         });
         return view;
     }
 
-    public void openNextFragment(){
-        FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.authentication_fragment_container, new FitnessLevelFragment());
-        fragmentTransaction.addToBackStack(null);
-        fragmentTransaction.commit();
+    public void openHomeActivity(){
+        Intent intent = new Intent(getActivity(), HomeActivity.class);
+        startActivity(intent);
     }
 }

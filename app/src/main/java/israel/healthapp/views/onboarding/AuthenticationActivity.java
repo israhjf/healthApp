@@ -1,6 +1,7 @@
 package israel.healthapp.views.onboarding;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
@@ -12,8 +13,6 @@ import israel.healthapp.R;
 
 public class AuthenticationActivity extends AppCompatActivity {
     private static final String TAG = "AuthenticationActivity";
-    private SectionsPagerAdapter sectionsPagerAdapter;
-    private ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,16 +20,14 @@ public class AuthenticationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_authentication);
         getSupportActionBar().hide();
 
-        Log.d(TAG, "onCreate: Starting");
-        sectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
-        viewPager = findViewById(R.id.authentication_view_pager);
-        setupViewPager(viewPager);
+        openNextFragment();
+
     }
 
-    private void setupViewPager(ViewPager viewPager){
-        SectionsPagerAdapter adapter = new SectionsPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new WelcomeFragment(), "Welcome");
-        adapter.addFragment(new FitnessLevelFragment(), "FitnessLevel");
-        viewPager.setAdapter(adapter);
+    public void openNextFragment() {
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.authentication_fragment_container, new WelcomeFragment());
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 }

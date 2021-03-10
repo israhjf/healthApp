@@ -22,20 +22,19 @@ public class FitnessLevelFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_fitness_level, container, false);
-        button = (Button)view.findViewById(R.id.button_next);
+        button = (Button)view.findViewById(R.id.button_next_fitness_level);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //openNextFragment();
+                openNextFragment();
             }
         });
         return view;
     }
 
     public void openNextFragment(){
-        Fragment fitnessLevelFragment = new FitnessLevelFragment();
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
-        transaction.replace(R.id.authentication_view_pager, fitnessLevelFragment );
+        transaction.replace(R.id.authentication_fragment_container, new UserInfoFragment());
         transaction.addToBackStack(null);
         transaction.commit();
     }
