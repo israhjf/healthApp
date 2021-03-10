@@ -1,4 +1,4 @@
-package israel.healthapp.views.onboarding;
+package israel.healthapp.views.introductory;
 
 import android.os.Bundle;
 
@@ -10,12 +10,13 @@ import android.view.ViewGroup;
 
 import israel.healthapp.R;
 
-public class ThirdScreenFragment extends Fragment {
+
+public class SecondScreenFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_third_screen, container, false);
+        return inflater.inflate(R.layout.fragment_second_screen, container, false);
     }
 }

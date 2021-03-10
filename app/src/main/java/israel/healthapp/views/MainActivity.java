@@ -1,13 +1,12 @@
 package israel.healthapp.views;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
 
 import israel.healthapp.R;
-import israel.healthapp.views.onboarding.ViewPagerAdapter;
-import israel.healthapp.views.onboarding.ViewPagerFragment;
+import israel.healthapp.views.introductory.ViewPagerAdapter;
+import israel.healthapp.views.introductory.ViewPagerFragment;
 
 public class MainActivity extends AppCompatActivity {
 

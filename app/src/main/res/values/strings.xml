@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">HealthApp</string>
     <string name="button_start">START</string>
+    <string name="button_next">NEXT</string>
     <string name="screen1_header">Have a good health</string>
     <string name="screen2_header">Be stronger</string>
     <string name="screen3_header">Have a nice body</string>

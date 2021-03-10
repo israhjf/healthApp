@@ -1,4 +1,4 @@
-package israel.healthapp.views.onboarding;
+package israel.healthapp.views.introductory;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;

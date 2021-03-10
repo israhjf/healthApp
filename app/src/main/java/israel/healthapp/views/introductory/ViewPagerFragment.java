@@ -1,4 +1,4 @@
-package israel.healthapp.views.onboarding;
+package israel.healthapp.views.introductory;
 
 import android.os.Bundle;
 
