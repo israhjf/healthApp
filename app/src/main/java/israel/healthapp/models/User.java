@@ -3,15 +3,15 @@ package israel.healthapp.models;
 import java.util.UUID;
 
 public class User {
-    UUID id;
+    String name;
     String birthday;
-    double height;
-    double weight;
+    float height;
+    float weight;
     String gender;
     String fitnessLevel;
 
-    public User(UUID id, String birthday, double height, double weight, String gender, String fitnessLevel) {
-        this.id = id;
+    public User(String name, String birthday, float height, float weight, String gender, String fitnessLevel) {
+        this.name = name;
         this.birthday = birthday;
         this.height = height;
         this.weight = weight;
@@ -19,12 +19,12 @@ public class User {
         this.fitnessLevel = fitnessLevel;
     }
 
-    public UUID getId() {
-        return id;
+    public String getName() {
+        return name;
     }
 
-    public void setId(UUID id) {
-        this.id = id;
+    public void setId(String name) {
+        this.name = name;
     }
 
     public String getBirthday() {
@@ -35,19 +35,19 @@ public class User {
         this.birthday = birthday;
     }
 
-    public double getHeight() {
+    public float getHeight() {
         return height;
     }
 
-    public void setHeight(double height) {
+    public void setHeight(float height) {
         this.height = height;
     }
 
-    public double getWeight() {
+    public float getWeight() {
         return weight;
     }
 
-    public void setWeight(double weight) {
+    public void setWeight(float weight) {
         this.weight = weight;
     }
 

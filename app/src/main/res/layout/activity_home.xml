@@ -30,18 +30,18 @@
                 android:layout_centerVertical="true">
 
                 <TextView
-                    android:id="@+id/userAlias"
+                    android:id="@+id/user_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Capi Creative Design"
+                    android:text="User Name"
                     android:textColor="#FFFF"
                     android:textSize="24sp"/>
 
                 <TextView
-                    android:id="@+id/userName"
+                    android:id="@+id/fitness_level"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Profile"
+                    android:text="Fitness Level"
                     android:textColor="#FFFF"
                     android:textSize="24sp"/>
 

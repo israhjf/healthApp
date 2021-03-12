@@ -31,6 +31,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="40dp"
+            android:text="Name"
+            android:textSize="18sp"
+            android:layout_gravity="center_horizontal"/>
+
+        <EditText
+            android:id="@+id/userinfo_user_name"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:hint="Sam"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Birthday"
             android:textSize="18sp"
             android:layout_gravity="center_horizontal"/>

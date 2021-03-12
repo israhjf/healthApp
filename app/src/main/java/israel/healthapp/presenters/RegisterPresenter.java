@@ -3,7 +3,6 @@ package israel.healthapp.presenters;
 import java.io.IOException;
 
 import israel.healthapp.services.RegisterService;
-import israel.healthapp.services.RegisterServiceProxy;
 import israel.healthapp.services.request.RegisterRequest;
 import israel.healthapp.services.response.RegisterResponse;
 
@@ -18,12 +17,12 @@ public class RegisterPresenter extends Presenter {
         this.view = view;
     }
 
-    public RegisterResponse getRegisterResponse(RegisterRequest request) throws IOException{
+    public RegisterResponse getRegisterResponse(RegisterRequest request) {
         RegisterService registerService = getRegisterService();
         return registerService.getRegisterResponse(request);
     }
 
     RegisterService getRegisterService() {
-        return new RegisterServiceProxy();
+        return new RegisterService();
     }
 }

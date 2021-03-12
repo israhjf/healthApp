@@ -2,15 +2,15 @@ package israel.healthapp.services.response;
 
 import israel.healthapp.models.User;
 
-public class RegisterResponse extends Response {
+public class LoginResponse extends Response {
     private User user;
 
-    public RegisterResponse(String message) {
+    public LoginResponse(String message) {
         super(false);
         this.message = message;
     }
 
-    public RegisterResponse(User user) {
+    public LoginResponse(User user) {
         super(true);
         this.user = user;
     }

@@ -15,6 +15,7 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import israel.healthapp.R;
 
@@ -34,7 +35,12 @@ public class FitnessLevelFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openNextFragment();
+                if (fitnessLevel != null){
+                    openNextFragment();
+                }
+                else{
+                    Toast.makeText(getActivity(), "Invalid Input", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -43,8 +49,6 @@ public class FitnessLevelFragment extends Fragment {
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
         {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                // checkedId is the RadioButton selected
-
                 switch(checkedId) {
                     case R.id.radio_beginner:
                         fitnessLevel = "beginner";
@@ -73,23 +77,4 @@ public class FitnessLevelFragment extends Fragment {
         transaction.addToBackStack(null);
         transaction.commit();
     }
-
-//    public void onRadioButtonClicked(View view) {
-//        boolean checked = ((RadioButton) view).isChecked();
-//
-//        switch(view.getId()) {
-//            case R.id.radio_beginner:
-//                if (checked)
-//                    fitnessLevel = "beginner";
-//                    break;
-//            case R.id.radio_intermadiate:
-//                if (checked)
-//                    fitnessLevel = "intermediate";
-//                    break;
-//            case R.id.radio_advanced:
-//                if (checked)
-//                    fitnessLevel = "advanced";
-//                    break;
-//        }
-//    }
 }
